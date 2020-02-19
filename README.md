@@ -1,4 +1,16 @@
-# TypeScript BoilerPlate
-A small boilerplate I use for personal TS projects 📝
+# CLOG: Console.LOG
 
-Go [here](https://github.com/Fdebijl/tsbp/generate) to generate a new repo based on this boilerplate, or click the 'Use this template' button above.
+We code reuse now bois
+
+*Installation*:
+```
+npm install -S @fdebijl/clog
+```
+
+*Installation*:
+```ts
+import clog from 'clog';
+
+const clog = new Clog(LOGLEVEL.WARN);
+clog.log('This is an error', LOGLEVEL.ERROR);
+```
