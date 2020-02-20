@@ -2,11 +2,8 @@
   "name": "@fdebijl/clog",
   "version": "1.0.0",
   "description": "My personal stdout logger 📝",
-  "main": "dist/clog.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/**/*"
-  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "moment": "2.24.0"
   },

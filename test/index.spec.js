@@ -3,8 +3,7 @@ const expect = require('chai').expect;
 const should = require('chai').should;
 require('mocha-sinon');
 
-const { Clog } = require('../dist/clog');
-const { LOGLEVEL } = require('../dist/domain/enum/loglevel');
+const { Clog, LOGLEVEL } = require('../dist/index');
 
 beforeEach(function() {
   this.sinon.stub(console, 'log');
