@@ -1,5 +1,6 @@
 import moment from 'moment';
 import { LOGLEVEL } from './domain/enum/loglevel';
+
 export * from './domain/enum/loglevel';
 
 export class Clog {
