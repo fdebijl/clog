@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
-    "lint": "eslint ./src/**/* --max-warnings 2",
+    "lint": "eslint \"./src/**/*\" --max-warnings 2",
     "prepare": "tsc",
     "prepublishOnly": "npm run lint"
   },
