@@ -4,7 +4,9 @@
   "description": "My personal stdout logger 📝",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "dependencies": {
     "moment": "2.24.0"
   },
@@ -19,7 +21,6 @@
     "lint": "eslint ./src/* --max-warnings 2",
     "prepare": "tsc",
     "prepublishOnly": "npm run lint"
-
   },
   "repository": {
     "type": "git",
