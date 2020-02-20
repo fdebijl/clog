@@ -1,4 +1,4 @@
-name: Check Release Candidate
+name: Release Candidate Suite
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   check:
-    name: Check RC
+    name: Check
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
