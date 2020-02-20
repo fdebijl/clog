@@ -1,13 +1,18 @@
+<p align="center">
+  <img src="https://github.com/Fdebijl/clog/raw/master/img/logo.png">
+</p>
+
 # CLOG Logger utility
 
-Simple logging utility I can reuse in my personal projects
+Simple logging utility for reuse in my personal projects
 
-*Installation*:
+**Installation**:
 ```
 npm install -S @fdebijl/clog
 ```
 
-*Installation*:
+
+**Usage**:
 ```ts
 import clog from 'clog';
 
