@@ -4,7 +4,9 @@
 
 # CLOG Logger utility
 <p align="center>
+          
 ![Release](https://github.com/Fdebijl/clog/workflows/Release/badge.svg) [![DeepScan grade](https://deepscan.io/api/teams/7525/projects/9659/branches/128332/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=7525&pid=9659&bid=128332) [![BCH compliance](https://bettercodehub.com/edge/badge/Fdebijl/clog?branch=master)](https://bettercodehub.com/) ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@fdebijl/clog) ![npm (scoped with tag)](https://img.shields.io/npm/v/@fdebijl/clog/latest)
+
 </p>
 
 
