@@ -2,7 +2,7 @@
   "name": "@fdebijl/clog",
   "version": "1.0.0",
   "description": "My personal stdout logger 📝",
-  "main": "dist/index.js",
+  "main": "dist/clog.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
@@ -11,13 +11,21 @@
     "moment": "2.24.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.9",
+    "@types/mocha": "^7.0.1",
     "@types/node": "13.7.2",
     "@typescript-eslint/eslint-plugin": "2.20.0",
     "@typescript-eslint/parser": "2.20.0",
+    "chai": "^4.2.0",
     "eslint": "6.8.0",
+    "mocha": "^7.0.1",
+    "mocha-sinon": "^2.1.0",
+    "mochawesome": "^4.1.0",
+    "sinon": "^9.0.0",
     "typescript": "3.7.5"
   },
   "scripts": {
+    "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
     "lint": "eslint ./src/* --max-warnings 2",
     "prepare": "tsc",
     "prepublishOnly": "npm run lint"

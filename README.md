@@ -1,6 +1,6 @@
-# CLOG: Console.LOG
+# CLOG Logger utility
 
-We code reuse now bois
+Simple logging utility I can reuse in my personal projects
 
 *Installation*:
 ```

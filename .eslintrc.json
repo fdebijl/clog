@@ -27,5 +27,8 @@
   },
   "env": {
     "node": true
-  }
+  },
+  "ignorePatterns": [
+    "*spec.js"
+  ]
 }
