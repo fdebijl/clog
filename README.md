@@ -9,18 +9,27 @@
 
 </p>
 
-
 Simple logging utility for reuse in my personal projects
 
-**Installation**:
+### Installation:
 ```
 npm install -S @fdebijl/clog
 ```
 
 
-**Usage**:
+### Usage:
+
+TS:
 ```ts
-import clog from 'clog';
+import { from '@fdebijl/clog';
+
+const clog = new Clog(LOGLEVEL.WARN);
+clog.log('This is an error', LOGLEVEL.ERROR);
+```
+
+JS:
+```js
+const { Clog, LOGLEVEL } = require('@fdebijl/clog');
 
 const clog = new Clog(LOGLEVEL.WARN);
 clog.log('This is an error', LOGLEVEL.ERROR);
