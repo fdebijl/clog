@@ -22,7 +22,7 @@
     "mochawesome": "5.0.0",
     "semantic-release-conventional-commits": "2.0.1",
     "sinon": "9.0.0",
-    "typescript": "3.8.2"
+    "typescript": "3.8.3"
   },
   "scripts": {
     "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
