@@ -21,7 +21,7 @@ npm install -S @fdebijl/clog
 
 TS:
 ```ts
-import { from '@fdebijl/clog';
+import { Clog, LOGLEVEL } from '@fdebijl/clog';
 
 const clog = new Clog(LOGLEVEL.WARN);
 clog.log('This is an error', LOGLEVEL.ERROR);
