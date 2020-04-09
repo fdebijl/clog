@@ -9,6 +9,7 @@ export class Clog {
   constructor(minLogLevel?: LOGLEVEL) {
     if (typeof(minLogLevel) === 'number') {
       this.minLogLevel = minLogLevel;
+      process.env.LOGLEVEL = `${minLogLevel}`;
       this.log(`Set minimal log level to ${minLogLevel}`, LOGLEVEL.DEBUG);
       return;
     }
