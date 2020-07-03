@@ -16,13 +16,13 @@
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
     "chai": "4.2.0",
-    "eslint": "7.3.0",
+    "eslint": "7.4.0",
     "mocha": "8.0.1",
     "mocha-sinon": "2.1.2",
     "mochawesome": "6.1.1",
     "semantic-release-conventional-commits": "2.0.1",
     "sinon": "9.0.2",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   },
   "scripts": {
     "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
