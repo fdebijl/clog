@@ -7,7 +7,7 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "moment": "2.27.0"
+    "moment": "2.28.0"
   },
   "devDependencies": {
     "@types/chai": "4.2.12",
