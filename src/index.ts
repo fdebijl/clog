@@ -23,7 +23,7 @@ export class Clog {
     this.minLogLevel = LOGLEVEL.INFO;
   }
 
-  public log(message: string | object, level: LOGLEVEL = 1): void {
+  public log(message: string | Record<string, unknown>, level: LOGLEVEL = 1): void {
     if (level === LOGLEVEL.OFF) {
       return;
     }
@@ -32,5 +32,5 @@ export class Clog {
       message = typeof(message) === 'object' ? JSON.stringify(message, null, 4) : message;
       console.log(`${moment().format('DD/MM/Y HH:mm:ss')} [${LOGLEVEL[level]}] - ${message}`);
     }
-  };
+  }
 }
