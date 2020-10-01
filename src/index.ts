@@ -16,7 +16,11 @@ export class Clog {
 
     if (process.env.LOGLEVEL) {
       this.minLogLevel = Number.parseInt(process.env.LOGLEVEL);
-      this.log(`Picked up minimal log level ${this.minLogLevel} from environment variable.`, LOGLEVEL.DEBUG);
+
+      if (process.env.CLOG_ANNOUNCED === '0') {
+        this.log(`Picked up minimal log level ${this.minLogLevel} from environment variable.`, LOGLEVEL.DEBUG);
+        process.env.CLOG_ANNOUNCED = '1';
+      }
       return;
     }
 
