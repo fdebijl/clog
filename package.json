@@ -19,7 +19,7 @@
     "eslint": "7.12.1",
     "mocha": "8.2.0",
     "mocha-sinon": "2.1.2",
-    "mochawesome": "6.2.0",
+    "mochawesome": "6.2.1",
     "semantic-release-conventional-commits": "2.0.1",
     "sinon": "9.2.1",
     "typescript": "4.0.5"
