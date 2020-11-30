@@ -2,14 +2,10 @@
   <img src="https://github.com/Fdebijl/clog/raw/master/img/logo.png">
 </p>
 
-# CLOG Logger utility
-<p align="center>
-          
-![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@fdebijl/clog) ![npm (scoped with tag)](https://img.shields.io/npm/v/@fdebijl/clog/latest)
+# Clog Logging utility
 
-</p>
-
-Simple logging utility for reuse in my personal projects
+Simple logging utility for reuse in my personal projects.
+[View on NPM](https://www.npmjs.com/package/@fdebijl/clog).
 
 ### Installation:
 ```
