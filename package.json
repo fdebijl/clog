@@ -6,9 +6,7 @@
   "files": [
     "dist/**/*"
   ],
-  "dependencies": {
-    "moment": "2.29.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "4.2.14",
     "@types/mocha": "8.0.4",
@@ -35,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fdebijl/clog.git"
+    "url": "git+https://github.com/fdebijl/clog.git"
   },
   "author": {
     "name": "Floris de Bijl",
@@ -43,7 +41,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Fdebijl/clog/issues"
+    "url": "https://github.com/fdebijl/clog/issues"
   },
-  "homepage": "https://github.com/Fdebijl/clog#readme"
+  "homepage": "https://github.com/fdebijl/clog#readme"
 }
