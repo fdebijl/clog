@@ -20,31 +20,31 @@ describe('log a message', function() {
     it('should log at DEBUG level', function() {
       clog.log('Debug level entry', LOGLEVEL.DEBUG);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[DEBUG]');
+      expect(console.log.lastCall.args[0]).to.contain('[  DEBUG]');
     });
   
     it('should log at INFO level', function() {
       clog.log('Info level entry', LOGLEVEL.INFO);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[INFO]');
+      expect(console.log.lastCall.args[0]).to.contain('[   INFO]');
     });
 
     it('should log at WARN level', function() {
       clog.log('WARN level entry', LOGLEVEL.WARN);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[WARN]');
+      expect(console.log.lastCall.args[0]).to.contain('[   WARN]');
     });
 
     it('should log at ERROR level', function() {
       clog.log('ERROR level entry', LOGLEVEL.ERROR);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[ERROR]');
+      expect(console.log.lastCall.args[0]).to.contain('[  ERROR]');
     });
 
     it('should log at FATAL level', function() {
       clog.log('FATAL level entry', LOGLEVEL.FATAL);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[FATAL]');
+      expect(console.log.lastCall.args[0]).to.contain('[  FATAL]');
     });
 
     it('should NOT log at OFF level', function() {
@@ -64,25 +64,25 @@ describe('log a message', function() {
     it('should log at INFO level', function() {
       clog.log('Info level entry', LOGLEVEL.INFO);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[INFO]');
+      expect(console.log.lastCall.args[0]).to.contain('[   INFO]');
     });
 
     it('should log at WARN level', function() {
       clog.log('WARN level entry', LOGLEVEL.WARN);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[WARN]');
+      expect(console.log.lastCall.args[0]).to.contain('[   WARN]');
     });
 
     it('should log at ERROR level', function() {
       clog.log('ERROR level entry', LOGLEVEL.ERROR);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[ERROR]');
+      expect(console.log.lastCall.args[0]).to.contain('[  ERROR]');
     });
 
     it('should log at FATAL level', function() {
       clog.log('FATAL level entry', LOGLEVEL.FATAL);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[FATAL]');
+      expect(console.log.lastCall.args[0]).to.contain('[  FATAL]');
     });
 
     it('should NOT log at OFF level', function() {
@@ -107,19 +107,19 @@ describe('log a message', function() {
     it('should log at WARN level', function() {
       clog.log('WARN level entry', LOGLEVEL.WARN);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[WARN]');
+      expect(console.log.lastCall.args[0]).to.contain('[   WARN]');
     });
 
     it('should log at ERROR level', function() {
       clog.log('ERROR level entry', LOGLEVEL.ERROR);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[ERROR]');
+      expect(console.log.lastCall.args[0]).to.contain('[  ERROR]');
     });
 
     it('should log at FATAL level', function() {
       clog.log('FATAL level entry', LOGLEVEL.FATAL);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[FATAL]');
+      expect(console.log.lastCall.args[0]).to.contain('[  FATAL]');
     });
 
     it('should NOT log at OFF level', function() {
@@ -149,13 +149,13 @@ describe('log a message', function() {
     it('should log at ERROR level', function() {
       clog.log('ERROR level entry', LOGLEVEL.ERROR);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[ERROR]');
+      expect(console.log.lastCall.args[0]).to.contain('[  ERROR]');
     });
 
     it('should log at FATAL level', function() {
       clog.log('FATAL level entry', LOGLEVEL.FATAL);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[FATAL]');
+      expect(console.log.lastCall.args[0]).to.contain('[  FATAL]');
     });
 
     it('should NOT log at OFF level', function() {
@@ -190,7 +190,7 @@ describe('log a message', function() {
     it('should log at FATAL level', function() {
       clog.log('FATAL level entry', LOGLEVEL.FATAL);
       expect(console.log.calledOnce).to.be.true;
-      expect(console.log.lastCall.args[0]).to.contain('[FATAL]');
+      expect(console.log.lastCall.args[0]).to.contain('[  FATAL]');
     });
 
     it('should NOT log at OFF level', function() {

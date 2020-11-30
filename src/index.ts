@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { LOGLEVEL } from './domain/enum/loglevel';
 
 export * from './domain/enum/loglevel';
@@ -27,14 +26,46 @@ export class Clog {
     this.minLogLevel = LOGLEVEL.INFO;
   }
 
-  public log(message: string | Record<string, unknown>, level: LOGLEVEL = 1): void {
+  public log(message: unknown, level: LOGLEVEL = 1): void {
     if (level === LOGLEVEL.OFF) {
       return;
     }
 
     if (level >= this.minLogLevel) {
-      message = typeof(message) === 'object' ? JSON.stringify(message, null, 4) : message;
-      console.log(`${moment().format('DD/MM/Y HH:mm:ss')} [${LOGLEVEL[level]}] - ${message}`);
+      if (typeof(message) === 'object') {
+        message = JSON.stringify(message, null, 4);
+      }
+
+      const loglevel = this.leftPad(LOGLEVEL[level], 7, ' ');
+      console.log(`${this.getNow('DD/MM/Y HH:mm:ss')} [${loglevel}] - ${message}`);
     }
+  }
+
+  private leftPad(input: string, length: number, filler: string): string {
+    while (input.length < length) {
+      input = filler + input;
+    }
+
+    return input;
+  }
+
+  private getNow(format: string): string {
+    const now = new Date();
+
+    const dd = this.leftPad(`${now.getDate()}`, 2, '0');
+    const mm = this.leftPad(`${now.getMonth() + 1}`, 2, '0');
+    const yyyy = this.leftPad(`${now.getFullYear()}`, 2, '0');
+
+    const h = this.leftPad(`${now.getHours()}`, 2, '0');
+    const m = this.leftPad(`${now.getMinutes()}`, 2, '0');
+    const s = this.leftPad(`${now.getSeconds()}`, 2, '0');
+
+    return format
+      .replace(/DD/g, dd)
+      .replace(/MM/g, mm)
+      .replace(/Y/g, yyyy)
+      .replace(/HH/g, h)
+      .replace(/mm/g, m)
+      .replace(/ss/g, s)
   }
 }
