@@ -10,9 +10,9 @@
   "devDependencies": {
     "@types/chai": "4.2.16",
     "@types/mocha": "8.2.2",
-    "@types/node": "13.13.48",
-    "@typescript-eslint/eslint-plugin": "4.21.0",
-    "@typescript-eslint/parser": "4.21.0",
+    "@types/node": "13.13.50",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
     "chai": "4.3.4",
     "eslint": "7.24.0",
     "mocha": "8.3.2",
