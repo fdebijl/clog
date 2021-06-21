@@ -8,19 +8,19 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "4.2.18",
+    "@types/chai": "4.2.19",
     "@types/mocha": "8.2.2",
     "@types/node": "13.13.52",
-    "@typescript-eslint/eslint-plugin": "4.26.1",
-    "@typescript-eslint/parser": "4.26.1",
+    "@typescript-eslint/eslint-plugin": "4.27.0",
+    "@typescript-eslint/parser": "4.27.0",
     "chai": "4.3.4",
-    "eslint": "7.28.0",
+    "eslint": "7.29.0",
     "mocha": "8.4.0",
     "mocha-sinon": "2.1.2",
     "mochawesome": "6.2.2",
     "semantic-release-conventional-commits": "2.0.1",
     "sinon": "9.2.4",
-    "typescript": "4.3.2"
+    "typescript": "4.3.4"
   },
   "scripts": {
     "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
