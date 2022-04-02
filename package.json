@@ -33,9 +33,6 @@
     "prepare": "tsc",
     "prepublishOnly": "npm run lint && npm test"
   },
-  "release": {
-    "analyzeCommits": "semantic-release-conventional-commits"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fdebijl/clog.git"
