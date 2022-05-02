@@ -1,6 +1,6 @@
 {
   "name": "@fdebijl/clog",
-  "version": "1.122.0",
+  "version": "1.123.0",
   "description": "My personal stdout logger 📝",
   "main": "dist/index.js",
   "files": [
