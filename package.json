@@ -17,7 +17,7 @@
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "chai": "4.3.7",
-    "eslint": "8.44.0",
+    "eslint": "8.46.0",
     "mocha": "8.4.0",
     "mocha-sinon": "2.1.2",
     "mochawesome": "7.1.3",
