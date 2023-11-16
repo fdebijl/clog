@@ -2,37 +2,6 @@
   "name": "@fdebijl/clog",
   "version": "1.159.0",
   "description": "My personal stdout logger 📝",
-  "main": "dist/index.js",
-  "files": [
-    "dist/**/*"
-  ],
-  "devDependencies": {
-    "@fdebijl/eslint-config": "1.3.0",
-    "@fdebijl/tsconfig": "1.2.2",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
-    "@types/chai": "4.3.7",
-    "@types/mocha": "8.2.3",
-    "@types/node": "13.13.52",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
-    "chai": "4.3.10",
-    "eslint": "8.51.0",
-    "mocha": "8.4.0",
-    "mocha-sinon": "2.1.2",
-    "mochawesome": "7.1.3",
-    "semantic-release": "19.0.5",
-    "semantic-release-conventional-commits": "3.0.0",
-    "sinon": "13.0.2",
-    "typescript": "4.9.5"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
-    "lint": "eslint \"./src/**/*\" --max-warnings 2",
-    "prepare": "tsc",
-    "prepublishOnly": "npm run lint && npm test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fdebijl/clog.git"
@@ -45,5 +14,36 @@
   "bugs": {
     "url": "https://github.com/fdebijl/clog/issues"
   },
-  "homepage": "https://github.com/fdebijl/clog#readme"
+  "homepage": "https://github.com/fdebijl/clog#readme",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
+    "lint": "eslint \"./src/**/*\" --max-warnings 2",
+    "prepare": "tsc",
+    "prepublishOnly": "npm run lint && npm test"
+  },
+  "devDependencies": {
+    "@fdebijl/eslint-config": "1.3.0",
+    "@fdebijl/tsconfig": "1.2.2",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@types/chai": "4.3.10",
+    "@types/mocha": "10.0.4",
+    "@types/node": "20.9.0",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "6.11.0",
+    "chai": "4.3.10",
+    "eslint": "8.53.0",
+    "mocha": "10.2.0",
+    "mocha-sinon": "2.1.2",
+    "mochawesome": "7.1.3",
+    "semantic-release": "22.0.7",
+    "semantic-release-conventional-commits": "3.0.0",
+    "sinon": "17.0.1",
+    "typescript": "5.2.2"
+  }
 }

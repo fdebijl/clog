@@ -1,22 +1,57 @@
-name: Release Candidate Suite
+name: Tests
 
 on:
-  pull_request:
-    branches:    
+  push:
+    branches:
       - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+env:
+  NODE_VERSION: '20'
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v3
         with:
-          node-version: 16
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Run checks
-        run: npm run prepublishOnly
+      - name: Build
+        run: npm run build
+  test:
+    name: Test
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm run test
+        env:
+          CI: true
+          NODE_ENV: test
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
