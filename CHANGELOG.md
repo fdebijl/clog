@@ -1,3 +1,10 @@
+# [1.160.0](https://github.com/fdebijl/clog/compare/v1.159.0...v1.160.0) (2023-11-16)
+
+
+### Features
+
+* add ability to log to file ([#235](https://github.com/fdebijl/clog/issues/235)) ([f9bddc5](https://github.com/fdebijl/clog/commit/f9bddc5ff42e5fc14ad709ca14ae265d33f02e83))
+
 # [1.159.0](https://github.com/fdebijl/clog/compare/v1.158.0...v1.159.0) (2023-11-01)
 
 # [1.158.0](https://github.com/fdebijl/clog/compare/v1.157.0...v1.158.0) (2023-10-01)
