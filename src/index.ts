@@ -1,11 +1,19 @@
-import { LOGLEVEL } from './domain/enum/loglevel';
+import fs from 'fs/promises';
 
-export * from './domain/enum/loglevel';
+import { LOGLEVEL } from './domain';
+export * from './domain';
 
 export class Clog {
   private minLogLevel: LOGLEVEL;
+  private writeToFile: boolean;
 
-  constructor(minLogLevel?: LOGLEVEL) {
+  public logFileName: string;
+  public maxLogFileLines = 5000;
+
+  constructor(minLogLevel?: LOGLEVEL, writeToFile = false, logFileName = 'clog.log') {
+    this.writeToFile = writeToFile;
+    this.logFileName = logFileName;
+
     if (typeof(minLogLevel) === 'number') {
       this.minLogLevel = minLogLevel;
       process.env.LOGLEVEL = `${minLogLevel}`;
@@ -37,7 +45,7 @@ export class Clog {
       }
 
       const loglevel = this.leftPad(LOGLEVEL[level], 7, ' ');
-      console.log(`${this.getNow('DD/MM/Y HH:mm:ss')} [${loglevel}] - ${message}`);
+      this.printLine(`${this.getNow('DD/MM/Y HH:mm:ss')} [${loglevel}] - ${message}`);
     }
   }
 
@@ -67,5 +75,45 @@ export class Clog {
       .replace(/HH/g, h)
       .replace(/mm/g, m)
       .replace(/ss/g, s)
+  }
+
+  /**
+   * Prints a line to the console and writes it to the log file, if file logging is enabled
+   */
+  private printLine(message: string): void {
+    console.log(message);
+
+    if (this.writeToFile) {
+      this.writeLine(message);
+    }
+  }
+
+  /**
+   * Writes a line to the log file, if the number of lines exceeds the maximum, lines will be removed from the top
+   */
+  private async writeLine(message: string): Promise<void> {
+    await this.assertLogFile();
+
+    const content = await fs.readFile(this.logFileName, 'utf-8')
+    const lines = content.split('\n');
+
+    if (lines.length > this.maxLogFileLines) {
+      lines.shift();
+    }
+
+    lines.push(message);
+
+    await fs.writeFile(this.logFileName, lines.join('\n'));
+  }
+
+  /**
+   * Assert that the target log file exists
+   */
+  private async assertLogFile(): Promise<void> {
+    try {
+      await fs.access(this.logFileName);
+    } catch (error) {
+      await fs.writeFile(this.logFileName, '');
+    }
   }
 }
