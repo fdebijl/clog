@@ -2,10 +2,30 @@
   "name": "@fdebijl/clog",
   "version": "1.159.0",
   "description": "My personal stdout logger 📝",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fdebijl/clog.git"
+  },
+  "author": {
+    "name": "Floris de Bijl",
+    "email": "npm@debijl.xyz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fdebijl/clog/issues"
+  },
+  "homepage": "https://github.com/fdebijl/clog#readme",
   "main": "dist/index.js",
   "files": [
     "dist/**/*"
   ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
+    "lint": "eslint \"./src/**/*\" --max-warnings 2",
+    "prepare": "tsc",
+    "prepublishOnly": "npm run lint && npm test"
+  },
   "devDependencies": {
     "@fdebijl/eslint-config": "1.3.0",
     "@fdebijl/tsconfig": "1.2.2",
@@ -25,25 +45,5 @@
     "semantic-release-conventional-commits": "3.0.0",
     "sinon": "17.0.1",
     "typescript": "5.2.2"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "mocha --reporter mochawesome --reporter-options reportDir=test/report",
-    "lint": "eslint \"./src/**/*\" --max-warnings 2",
-    "prepare": "tsc",
-    "prepublishOnly": "npm run lint && npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fdebijl/clog.git"
-  },
-  "author": {
-    "name": "Floris de Bijl",
-    "email": "npm@debijl.xyz"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fdebijl/clog/issues"
-  },
-  "homepage": "https://github.com/fdebijl/clog#readme"
+  }
 }
