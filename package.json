@@ -1,6 +1,6 @@
 {
   "name": "@fdebijl/clog",
-  "version": "1.161.0",
+  "version": "1.162.0",
   "description": "My personal stdout logger 📝",
   "repository": {
     "type": "git",
