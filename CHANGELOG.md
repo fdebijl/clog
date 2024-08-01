@@ -1,3 +1,5 @@
+# [1.167.0](https://github.com/fdebijl/clog/compare/v1.166.0...v1.167.0) (2024-08-01)
+
 # [1.166.0](https://github.com/fdebijl/clog/compare/v1.165.0...v1.166.0) (2024-07-01)
 
 # [1.165.0](https://github.com/fdebijl/clog/compare/v1.164.0...v1.165.0) (2024-06-01)
